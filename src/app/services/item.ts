@@ -14,6 +14,9 @@ export class ItemService {
   private itemsSubject = new BehaviorSubject<Item[]>([]);
   items$ = this.itemsSubject.asObservable();
 
+  private loadingSubject = new BehaviorSubject<boolean>(false);
+  public loading$ = this.loadingSubject.asObservable();
+
   constructor(private readonly http: HttpClient) {
     this.loadMockData();
   }
@@ -23,6 +26,7 @@ export class ItemService {
     if (storedItems && storedItems.length > 0) {
       this.setItems(JSON.parse(storedItems));
     } else {
+      this.loadingSubject.next(true);
       const params = new HttpParams()
         .set('page', pageIndex.toString())
         .set('limit', pageSize.toString());
@@ -31,6 +35,7 @@ export class ItemService {
         .pipe(delay(500))
         .subscribe((mock) => {
           this.setItems(mock);
+          this.loadingSubject.next(false);
         });
     }
   }

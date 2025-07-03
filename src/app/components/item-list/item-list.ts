@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BehaviorSubject, catchError, of, Subject, takeUntil } from 'rxjs';
+import { catchError, of, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 import { Item } from '../../models/item';
@@ -49,16 +49,13 @@ export class ItemList implements OnInit, AfterViewInit, OnDestroy {
   dataSource = new MatTableDataSource<Item>();
   destroyed$ = new Subject<void>();
 
-  private loadingSubject = new BehaviorSubject<boolean>(false);
-  public loading$ = this.loadingSubject.asObservable();
-
   pageSize = 10;
 
   @ViewChild(MatPaginator, { static: false }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort!: MatSort;
 
   constructor(
-    private itemService: ItemService,
+    public itemService: ItemService,
     private dialog: MatDialog,
     private snackBar: MatSnackBar
   ) {}
@@ -78,7 +75,6 @@ export class ItemList implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private loadData(): void {
-    this.loadingSubject.next(true);
     this.itemService.items$
       .pipe(
         catchError(() => of([])),

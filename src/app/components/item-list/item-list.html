@@ -1,4 +1,7 @@
 <div class="table-wrapper">
+  @if (itemService.loading$ | async) {
+  <div class="spinner-overlay"><mat-spinner></mat-spinner></div>
+  }
   <table
     mat-table
     [dataSource]="dataSource"
@@ -70,11 +73,10 @@
   </table>
 
   <mat-paginator
+    class="paginator"
     [length]="dataSource && dataSource.data.length"
     [pageSizeOptions]="[5, 10, 50]"
     showFirstLastButtons
     [pageSize]="pageSize"
-  >
-    ></mat-paginator
-  >
+  ></mat-paginator>
 </div>
