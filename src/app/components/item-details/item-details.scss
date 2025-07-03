@@ -1,0 +1,41 @@
+.details-container {
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .actions__btn {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus {
+      background-color: #0f0bee;
+      cursor: pointer;
+    }
+  }
+
+  .icon-success {
+    color: green;
+  }
+
+  .icon-error {
+    color: red;
+  }
+}
+
+.error-message {
+  color: red;
+}

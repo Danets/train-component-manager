@@ -1,0 +1,80 @@
+<div class="table-wrapper">
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort
+    class="mat-elevation-z8 table"
+  >
+    <!-- ID -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td data-label="Id" mat-cell *matCellDef="let item">{{ item.id }}</td>
+    </ng-container>
+
+    <!-- Name -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td data-label="Name" mat-cell *matCellDef="let item">{{ item.name }}</td>
+    </ng-container>
+
+    <!-- Unique Number -->
+    <ng-container matColumnDef="uniqueNumber">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Unique Number</th>
+      <td data-label="UniqueNumber" mat-cell *matCellDef="let item">
+        {{ item.uniqueNumber }}
+      </td>
+    </ng-container>
+
+    <!-- Can Assign Quantity -->
+    <ng-container matColumnDef="canAssignQuantity">
+      <th mat-header-cell *matHeaderCellDef>Can Assign</th>
+      <td data-label="CanAssignQuantity" mat-cell *matCellDef="let item">
+        <mat-icon
+          [ngClass]="item.canAssignQuantity ? 'icon-success' : 'icon-error'"
+        >
+          {{ item.canAssignQuantity ? 'check' : 'close' }}
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <!-- Quantity -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Quantity</th>
+      <td data-label="Quantity" mat-cell *matCellDef="let item">
+        {{ item.quantity || '-' }}
+      </td>
+    </ng-container>
+
+    <!-- Actions -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td data-label="Assign quantity" mat-cell *matCellDef="let item">
+        @if (item.canAssignQuantity) {
+        <button
+          matButton="filled"
+          class="actions__btn"
+          (click)="assignQuantity(item, $event)"
+        >
+          assign quantity
+        </button>
+        }
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns;"
+      [routerLink]="['/items', row.id]"
+    ></tr>
+  </table>
+
+  <mat-paginator
+    [length]="dataSource && dataSource.data.length"
+    [pageSizeOptions]="[5, 10, 50]"
+    showFirstLastButtons
+    [pageSize]="pageSize"
+  >
+    ></mat-paginator
+  >
+</div>

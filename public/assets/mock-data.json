@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Engine",
+    "uniqueNumber": "ENG123",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 2,
+    "name": "Passenger Car",
+    "uniqueNumber": "PAS456",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 3,
+    "name": "Freight Car",
+    "uniqueNumber": "FRT789",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 4,
+    "name": "Wheel",
+    "uniqueNumber": "WHL101",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 5,
+    "name": "Seat",
+    "uniqueNumber": "STS234",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 6,
+    "name": "Window",
+    "uniqueNumber": "WIN567",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 7,
+    "name": "Door",
+    "uniqueNumber": "DR123",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 8,
+    "name": "Control Panel",
+    "uniqueNumber": "CTL987",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 9,
+    "name": "Light",
+    "uniqueNumber": "LGT456",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 10,
+    "name": "Brake",
+    "uniqueNumber": "BRK789",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 11,
+    "name": "Bolt",
+    "uniqueNumber": "BLT321",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 12,
+    "name": "Nut",
+    "uniqueNumber": "NUT654",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 13,
+    "name": "Engine Hood",
+    "uniqueNumber": "EH789",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 14,
+    "name": "Axle",
+    "uniqueNumber": "AX456",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 15,
+    "name": "Piston",
+    "uniqueNumber": "PST789",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 16,
+    "name": "Handrail",
+    "uniqueNumber": "HND234",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 17,
+    "name": "Step",
+    "uniqueNumber": "STP567",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 18,
+    "name": "Roof",
+    "uniqueNumber": "RF123",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 19,
+    "name": "Air Conditioner",
+    "uniqueNumber": "AC789",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 20,
+    "name": "Flooring",
+    "uniqueNumber": "FLR456",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 21,
+    "name": "Mirror",
+    "uniqueNumber": "MRR789",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 22,
+    "name": "Horn",
+    "uniqueNumber": "HRN321",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 23,
+    "name": "Coupler",
+    "uniqueNumber": "CPL654",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 24,
+    "name": "Hinge",
+    "uniqueNumber": "HNG987",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 25,
+    "name": "Ladder",
+    "uniqueNumber": "LDR456",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 26,
+    "name": "Paint",
+    "uniqueNumber": "PNT789",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 27,
+    "name": "Decal",
+    "uniqueNumber": "DCL321",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 28,
+    "name": "Gauge",
+    "uniqueNumber": "GGS654",
+    "canAssignQuantity": true
+  },
+  {
+    "id": 29,
+    "name": "Battery",
+    "uniqueNumber": "BTR987",
+    "canAssignQuantity": false
+  },
+  {
+    "id": 30,
+    "name": "Radiator",
+    "uniqueNumber": "RDR456",
+    "canAssignQuantity": false
+  }
+]

@@ -1,0 +1,75 @@
+.table-wrapper {
+  padding: 16px;
+  overflow-x: auto;
+
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: #000;
+  }
+
+  .actions__btn {
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus {
+      background-color: #0f0bee;
+      cursor: pointer;
+    }
+  }
+
+  .icon-success {
+    color: green;
+  }
+
+  .icon-error {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    border: 0;
+    th {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      display: block;
+      height: auto;
+      border-bottom: 3px solid #ddd;
+      margin-bottom: 0.625rem;
+    }
+    td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      position: relative;
+      font-size: 0.8rem;
+      text-align: right;
+    }
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    td:last-child {
+      border-bottom: 0;
+    }
+
+    .actions__btn {
+      padding: 0.2rem 0.4rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@if (item) {
+<div class="details-container">
+  <h2 class="details-container__title">Details</h2>
+
+  <div class="detail"><strong>ID:</strong> {{ item.id }}</div>
+  <div class="detail"><strong>Name:</strong> {{ item.name }}</div>
+  <div class="detail">
+    <strong>Unique Number:</strong> {{ item.uniqueNumber }}
+  </div>
+  <div class="detail">
+    <strong>Can Assign Quantity :</strong>
+    <mat-icon
+      [ngClass]="item.canAssignQuantity ? 'icon-success' : 'icon-error'"
+    >
+      {{ item.canAssignQuantity ? 'check' : 'close' }}
+    </mat-icon>
+  </div>
+  <div class="detail">
+    <strong>Qquantity:</strong> {{ item.quantity || '-' }}
+  </div>
+
+  <button
+    class="actions__btn"
+    matButton="filled"
+    (click)="router.navigate(['/'])"
+  >
+    Return to List
+  </button>
+</div>
+
+} @else {
+<p class="error-message">Item not found.</p>
+}
